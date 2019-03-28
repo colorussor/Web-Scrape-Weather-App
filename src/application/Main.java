@@ -68,13 +68,17 @@ public class Main extends Application implements Initializable {
 		String text=getText();
 		goButton.setOnAction(e->{
 			try {
+				if(text.length()<=6 && text.length()>=5) {
 				closeButtonAction();
 				Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 				Scene scene2=new Scene(root2);
 				Stage stage=new Stage();
 				stage.setScene(scene2);
 				stage.show();
-			
+				}else {
+					System.out.print("bad");
+					System.out.println(text.length());
+				}
 			} catch(Exception ex) {
 				ex.printStackTrace();
 			}
@@ -84,19 +88,21 @@ public class Main extends Application implements Initializable {
 			try {
 				String ziptest=getText();
 				if(ex.getCode()==KeyCode.ENTER) {
-				// if(ziptest.length()>6 || ziptest.length()<5) {
-				closeButtonAction();
-				Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
-				Scene scene2=new Scene(root2);
-				Stage stage=new Stage();
-				stage.setScene(scene2);
-				stage.show();
+					if(ziptest.length()<=6 && ziptest.length()>=5) {
+						closeButtonAction();
+						Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
+						Scene scene2=new Scene(root2);
+						Stage stage=new Stage();
+						stage.setScene(scene2);
+						stage.show();
+					}else {
+						System.out.print("bad");
+						System.out.println(ziptest.length());
+					}
 				}
-				// }else {
-					// System.out.print("bad");
 			} catch(Exception exe) {
 				exe.printStackTrace();
-			
+
 			}
 		});
 
