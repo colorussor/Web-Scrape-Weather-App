@@ -16,6 +16,7 @@ public class TEST {
 
 	public static void main(String[] args) {
 		//System.out.println("Running");
+
 		Document document;
 		Document five_day;
 		String zip = "";
@@ -41,7 +42,7 @@ public class TEST {
 			Elements day3 = five_day.select("tr.closed.clickable:nth-of-type(3)");
 			Elements day4 = five_day.select("tr.closed.clickable:nth-of-type(4)");
 			Elements day5 = five_day.select("tr.closed.clickable:nth-of-type(5)");
-			//Elements day6 = five_day.select("tr.closed.clickable:nth-of-type(6)");
+			Elements day6 = five_day.select("tr.closed.clickable:nth-of-type(6)");
 			//Elements fivedesc = five_day.select("td.description");
 			//Elements fivetemp = five_day.select("td.temp");
 			//Elements fiveprecip = five_day.select("td.precip");
@@ -89,3 +90,4 @@ public class TEST {
 	}
 
 }
+
