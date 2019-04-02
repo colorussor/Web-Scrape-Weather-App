@@ -16,7 +16,7 @@ public class TEST {
 
 	public static void main(String[] args) {
 		//System.out.println("Running");
-
+/**
 		Document document;
 		Document five_day;
 		String zip = "";
@@ -24,7 +24,8 @@ public class TEST {
 		System.out.printf("Input a zip code: ");
 		zip = scan.next();
 		
-		
+**/
+/**
 		try {
 			document = Jsoup.connect("https://weather.com/weather/today/l/"+ zip +":4:US").get();
 			five_day = Jsoup.connect("https://weather.com/weather/5day/l/"+ zip +":4:US").get();
@@ -48,8 +49,8 @@ public class TEST {
 			//Elements fiveprecip = five_day.select("td.precip");
 			//Elements fivewind = five_day.select("td.wind");
 			//Elements humid = document.select("table.today_nowcard-sidecar component panel");
-
-			
+**/
+/**		
 			for (int i=0; i < temp.size(); i++) {
 				System.out.println(temp.get(i).text());
 				System.out.println(phrase.get(i).text());
@@ -68,7 +69,7 @@ public class TEST {
 						//", Precipitation: "+fiveprecip.get(i).text()+
 						//", Wind: "+fivewind.get(i).text());
 			}
-			
+**/			
 			/*
 			for (Element row : five_day.select(
 					"table.twc-table-scroller tr")) {
@@ -83,11 +84,31 @@ public class TEST {
 			*/
 			//System.out.println(temp.get().text);
 			//System.out.println(temp);
+/**
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
 		//System.out.println("Done"+"\u00b0");
 	}
-
+**/
+		
+		//String zipcode = "02115";
+		Scanner scan = new Scanner(System.in);
+		System.out.printf("Input a zip code: ");
+		String zip = scan.next();
+		
+		WebInfo w = new WebInfo(zip);
+		
+		w.testWeb();	
+		//w.printString();
+		String[] weather = w.setScene();
+		
+		//for(int z=0; z<weather.length; z++) {
+			//System.out.println(weather[z]);
+		//}
+		System.out.println(weather[1]);
+		
+	}
+	
 }
 

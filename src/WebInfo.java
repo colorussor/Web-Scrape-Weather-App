@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.jsoup.Jsoup;
@@ -31,20 +32,46 @@ public class WebInfo {
 		this.zip = zip;
 	}
 	
-	public String toString() {
-		StringBuilder test = new StringBuilder();
-		for (int i=0; i < temp.size(); i++) {
-			test.append(temp.get(i).text());
-			test.append(phrase.get(i).text());
-			test.append(feel.get(i).text());
-			test.append(hilo.get(i).text());
-			test.append(day.get(i).text());
-			test.append(day2.get(i).text());
-			test.append(day3.get(i).text());
-			test.append(day4.get(i).text());
-			test.append(day5.get(i).text());
-		}
-		return test.toString();
+	public void printString() {
+		String title = document.title();
+		strMip updatedTitle = new strMip(title, "Weather Forecast and Conditions - The Weather Channel | Weather.com");
+		System.out.printf("%s%n", updatedTitle);
+		int i=0;
+		//for (int i=0; i < temp.size(); i++) {
+			System.out.println(temp.get(i).text());
+			System.out.println(phrase.get(i).text());
+			System.out.println(feel.get(i).text());
+			System.out.println(hilo.get(i).text());
+			System.out.println(day.get(i).text());
+			System.out.println(day2.get(i).text());
+			System.out.println(day3.get(i).text());
+			System.out.println(day4.get(i).text());
+			System.out.println(day5.get(i).text());
+		//}
+	}
+	
+	public String[] setScene() {
+		//Arraylist used for storing the strings for the weather
+		ArrayList<String> list = new ArrayList<String>();
+		String title = document.title();
+		strMip updatedTitle = new strMip(title, "Weather Forecast and Conditions - The Weather Channel | Weather.com");
+		System.out.printf("%s%n", updatedTitle);
+		int i=0;
+			list.add(temp.get(i).text());
+			list.add(phrase.get(i).text());
+			list.add(feel.get(i).text());
+			list.add(hilo.get(i).text());
+			list.add(day.get(i).text());
+			list.add(day2.get(i).text());
+			list.add(day3.get(i).text());
+			list.add(day4.get(i).text());
+			list.add(day5.get(i).text());
+
+			String[] weather = new String[list.size()];
+			for(int x = 0; x < weather.length; x++) {
+				weather[x] = list.get(x);
+			}
+			return weather;
 	}
 	
 	public boolean testWeb() {
@@ -57,8 +84,6 @@ public class WebInfo {
 		try {
 			document = Jsoup.connect(test.toString()).get();
 			five_day = Jsoup.connect(test2.toString()).get();
-			String title = document.title();
-			System.out.printf("%s%n", title);
 			//Elements temp = document.select("today_nowcard-temp:contains(\u00b0)");
 			temp = document.select("div.today_nowcard-temp");
 			phrase = document.select("div.today_nowcard-phrase");
