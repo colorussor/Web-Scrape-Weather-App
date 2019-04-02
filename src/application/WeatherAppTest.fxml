@@ -1,37 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="AnchorMain" prefHeight="552.0" prefWidth="1048.0" styleClass="bodybg" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
    <children>
-      <TitledPane animated="false" prefHeight="500.0" prefWidth="1000.0" text="Weather App" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <content>
-          <AnchorPane>
-               <children>
-                  <Line endX="467.0" layoutX="499.0" layoutY="377.0" startX="-479.0" />
-                  <Line endX="-11.0" endY="57.5" layoutX="504.0" layoutY="318.0" startX="-11.0" startY="-301.0" />
-                  <Circle fill="DODGERBLUE" layoutX="236.0" layoutY="196.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" layoutX="758.0" layoutY="173.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="66.0" layoutX="55.0" layoutY="394.0" stroke="BLACK" strokeType="INSIDE" width="908.0" />
-                  <Text layoutX="115.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current">
-                     <font>
-                        <Font name="Copperplate Gothic Bold" size="50.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="606.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempature">
-                     <font>
-                        <Font name="Copperplate Gothic Bold" size="50.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
+      <Text fx:id="location" layoutX="347.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City, St (ZIP)">
+         <font>
+            <Font size="59.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="86.0" fitWidth="140.0" layoutX="436.0" layoutY="136.0" pickOnBounds="true">
+         <image>
+            <Image url="@pnqHVb.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="currenttemp" layoutX="436.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Temp">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text fx:id="currentcondit" layoutX="461.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Line endX="524.0" layoutX="524.0" layoutY="411.0" startX="-526.0" />
+      <Text fx:id="day1" layoutX="39.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day One">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text fx:id="day1t" layoutX="73.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Line endX="-94.5" endY="116.0" layoutX="298.0" layoutY="420.0" startX="-94.5" startY="8.0" />
+      <Text fx:id="day2" layoutX="235.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Two">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text fx:id="day2t" layoutX="269.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Line endX="-94.5" endY="116.0" layoutX="480.0" layoutY="420.0" startX="-94.5" startY="8.0" />
+      <Text fx:id="day4" layoutX="653.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Four">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text fx:id="day3" layoutX="431.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Three">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text fx:id="day5" layoutX="879.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Five">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text fx:id="day5t" layoutX="913.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text fx:id="day4t" layoutX="681.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text fx:id="day3t" layoutX="463.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Line endX="-94.5" endY="116.0" layoutX="932.0" layoutY="420.0" startX="-94.5" startY="8.0" />
+      <Line endX="-94.5" endY="116.0" layoutX="690.0" layoutY="420.0" startX="-94.5" startY="8.0" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="80.0" layoutY="457.0" pickOnBounds="true">
+         <image>
+            <Image url="@img-placeholder.1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="273.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img-placeholder.1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img-placeholder.1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="685.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img-placeholder.1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="915.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img-placeholder.1.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
