@@ -100,13 +100,13 @@ public class TEST {
 		WebInfo w = new WebInfo(zip);
 		
 		w.testWeb();	
-		//w.printString();
+		w.printString();
 		String[] weather = w.setScene();
 		
 		//for(int z=0; z<weather.length; z++) {
 			//System.out.println(weather[z]);
 		//}
-		System.out.println(weather[1]);
+		//System.out.println(weather[1]);
 		
 	}
 	
