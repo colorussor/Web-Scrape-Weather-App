@@ -109,9 +109,10 @@ public class Main extends Application implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// Pretty easy to understand, when you click the gobutton it opens the main application.
-		 String text=getText();
+		
 		goButton.setOnAction(e->{
 			try {
+				 String text=getText();
 				 if(text.length()<=6 && text.length()>=5) {
 				closeButtonAction();
 				Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
@@ -145,6 +146,7 @@ public class Main extends Application implements Initializable {
 					 }
 				}
 			} catch(Exception exe) {
+				//a
 				exe.printStackTrace();
 
 			}
