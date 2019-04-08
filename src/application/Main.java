@@ -25,46 +25,6 @@ import javafx.scene.text.Text;
 
 
 public class Main extends Application implements Initializable {
-	@FXML
-	Image dayone;
-	@FXML
-	Image daytwo;
-	@FXML
-	Image daythree;
-	@FXML
-	Image dayfour;
-	@FXML
-	Image dayfive;
-	@FXML
-	Image currentcondo;
-	@FXML
-	Text location;
-	@FXML
-	Text currentday;
-	@FXML
-	Text currentcondit;
-	@FXML
-	Text currenttemp;
-	@FXML
-	Text day1;
-	@FXML
-	Text day2;
-	@FXML
-	Text day3;
-	@FXML
-	Text day4;
-	@FXML
-	Text day5;
-	@FXML
-	Text day1t;
-	@FXML
-	Text day2t;
-	@FXML
-	Text day3t;
-	@FXML
-	Text day4t;
-	@FXML
-	Text day5t;
 	// the "Go" button for the opening fxml file..
 	@FXML
 	Button goButton;
@@ -73,10 +33,6 @@ public class Main extends Application implements Initializable {
 	TextField zip;
 	@FXML
 	AnchorPane AnchorOpen;
-	@FXML
-	AnchorPane AnchorMain;
-	@FXML
-	Pane pane;
 	@FXML
 	// this is a method that will close ANY pane when called
 	private void closeButtonAction(){
@@ -113,7 +69,7 @@ public class Main extends Application implements Initializable {
 		goButton.setOnAction(e->{
 			try {
 				 String text=getText();
-				 if(text.length()<=6 && text.length()>=5) {
+				 if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
 				closeButtonAction();
 				Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 				Scene scene2=new Scene(root2);
@@ -131,9 +87,9 @@ public class Main extends Application implements Initializable {
 		// Zip is the text field, when the user hits enter it closes the pane and opens the main one. I need to change it so it will only close if a valid zipcode is entered
 		zip.setOnKeyPressed( ex->{
 			try {
-				 String ziptest=getText();
+				 String text=getText();
 				if(ex.getCode()==KeyCode.ENTER) {
-					 if(ziptest.length()<=6 && ziptest.length()>=5) {
+					 if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
 						closeButtonAction();
 						Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 						Scene scene2=new Scene(root2);
@@ -142,7 +98,7 @@ public class Main extends Application implements Initializable {
 						stage.show();
 					}else {
 						System.out.print("bad");
-						System.out.println(ziptest.length());
+						System.out.println(text.length());
 					 }
 				}
 			} catch(Exception exe) {
