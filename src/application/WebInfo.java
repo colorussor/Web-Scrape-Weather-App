@@ -56,17 +56,18 @@ public class WebInfo {
 		ArrayList<String> list = new ArrayList<String>();
 		String title = document.title();
 		strMip updatedTitle = new strMip(title, "Weather Forecast and Conditions - The Weather Channel | Weather.com");
-		System.out.printf("%s%n", updatedTitle);
+		//System.out.printf("%s%n", updatedTitle);
 		int i=0;
-			list.add(temp.get(i).text());
-			list.add(phrase.get(i).text());
-			list.add(feel.get(i).text());
-			list.add(hilo.get(i).text());
-			list.add(day.get(i).text());
-			list.add(day2.get(i).text());
-			list.add(day3.get(i).text());
-			list.add(day4.get(i).text());
-			list.add(day5.get(i).text());
+			list.add(updatedTitle.toString()); //Index 0 is the Location and the Zip
+			list.add(temp.get(i).text()); //Temperature
+			list.add(phrase.get(i).text()); //Current Condition Phrase
+			list.add(feel.get(i).text()); //"Feels like ______"
+			list.add(hilo.get(i).text()); //High/Low temp
+			list.add(day.get(i).text()); //First of the 5 day
+			list.add(day2.get(i).text()); //Second of the 5 day
+			list.add(day3.get(i).text()); //Third of the 5 day
+			list.add(day4.get(i).text()); //Fourth of the 5 day
+			list.add(day5.get(i).text()); //Fifth of the 5 day
 
 			String[] weather = new String[list.size()];
 			for(int x = 0; x < weather.length; x++) {

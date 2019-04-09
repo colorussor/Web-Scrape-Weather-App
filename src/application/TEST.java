@@ -108,7 +108,7 @@ public class TEST {
 		//for(int z=0; z<weather.length; z++) {
 			//System.out.println(weather[z]);
 		//}
-		//System.out.println(weather[1]);
+		System.out.println(weather[0]);
 		
 	}
 	
