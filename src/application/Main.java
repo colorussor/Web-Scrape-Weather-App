@@ -6,6 +6,8 @@ import java.util.ResourceBundle;
 import com.sun.glass.events.KeyEvent;
 
 import javafx.application.Application;
+import javafx.beans.binding.Bindings;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +16,10 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -42,7 +46,7 @@ public class Main extends Application implements Initializable {
 	private String getText() {
 		String zipcode=zip.getText();
 		return zipcode;
-	 }
+	}
 	// This is the opening page. the one where it asks for a zipcode
 	@Override
 	public void start(Stage primaryStage) {
@@ -50,6 +54,7 @@ public class Main extends Application implements Initializable {
 			Parent root=FXMLLoader.load(getClass().getClassLoader().getResource("application/Opening.fxml"));
 			Scene scene=new Scene(root);
 			Stage stage1=new Stage();
+			stage1.setTitle("Weather Application");
 			stage1.setScene(scene);
 			stage1.show();
 		} catch(Exception e) {
@@ -65,41 +70,42 @@ public class Main extends Application implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// Pretty easy to understand, when you click the gobutton it opens the main application.
-		
 		goButton.setOnAction(e->{
 			try {
-				 String text=getText();
-				 if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
-				closeButtonAction();
-				Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
-				Scene scene2=new Scene(root2);
-				Stage stage=new Stage();
-				stage.setScene(scene2);
-				stage.show();
-			 	}else {
+				String text=getText();
+				if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
+					closeButtonAction();
+					Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
+					Scene scene2=new Scene(root2);
+					Stage stage=new Stage();
+					stage.setTitle("Weather Application");
+					stage.setScene(scene2);
+					stage.show();
+				}else {
 					System.out.print("bad ");
 					System.out.println(text.length());
-				 }
+				}
 			} catch(Exception ex) {
 				ex.printStackTrace();
-			 }
+			}
 		});
 		// Zip is the text field, when the user hits enter it closes the pane and opens the main one. I need to change it so it will only close if a valid zipcode is entered
 		zip.setOnKeyPressed( ex->{
 			try {
-				 String text=getText();
+				String text=getText();
 				if(ex.getCode()==KeyCode.ENTER) {
-					 if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
+					if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
 						closeButtonAction();
 						Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 						Scene scene2=new Scene(root2);
 						Stage stage=new Stage();
+						stage.setTitle("Weather Application");
 						stage.setScene(scene2);
 						stage.show();
 					}else {
 						System.out.print("bad");
 						System.out.println(text.length());
-					 }
+					}
 				}
 			} catch(Exception exe) {
 				//a

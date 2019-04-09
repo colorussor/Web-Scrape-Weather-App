@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="AnchorMain" prefHeight="552.0" prefWidth="1048.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainApp">
    <children>
-      <Text fx:id="location" layoutX="347.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City, St (ZIP)">
+      <Text fx:id="location" layoutX="347.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="didn't work">
          <font>
             <Font size="59.0" />
          </font>

@@ -2,11 +2,14 @@ package application;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 import javafx.application.Application;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -52,7 +55,7 @@ public class MainApp extends Application implements Initializable {
 	Text day1t;
 	@FXML
 	Text day2t;
-	@FXML
+	@FXML	
 	Text day3t;
 	@FXML
 	Text day4t;
@@ -60,20 +63,35 @@ public class MainApp extends Application implements Initializable {
 	Text day5t;
 	@FXML
 	AnchorPane AnchorMain;
+	protected static void texttest() {
+	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
 
 	}
 	public void start(Stage arg0) throws Exception {
-	
+		Scanner scan = new Scanner(System.in);
+		System.out.printf("Input a zip code: ");
+		String zip = scan.next();
+		WebInfo w = new WebInfo(zip);
+		String pleasework="";
+		Text text=new Text();
+		
+		text.setX(50);
+		text.setY(50);
+		Group root=new Group(text);
+		Scene scene=new Scene(root,100,100);
+		Stage stage=new Stage();
+		stage.setScene(scene);
+		stage.show();
+
 
 	}
 	public static void main(String[] args) {
-		// Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
-		// Scene scene2=new Scene(root2);
-		// Stage stage=new Stage();
-		// stage.setScene(scene2);
-		// stage.show();
+		launch(args);
+	}
+	
+	public static  void test() {
+			
 	}
 }
