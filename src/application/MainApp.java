@@ -70,10 +70,9 @@ public class MainApp extends Application implements Initializable {
 
 	}
 	public void start(Stage arg0) throws Exception {
-		Scanner scan = new Scanner(System.in);
-		System.out.printf("Input a zip code: ");
-		String zip = scan.next();
-		WebInfo w = new WebInfo(zip);
+		
+		WebInfo w=new WebInfo("02324");
+		String[] test=w.setScene();
 		String pleasework="";
 		Text text=new Text();
 		
