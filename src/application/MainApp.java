@@ -73,9 +73,8 @@ public class MainApp extends Application implements Initializable {
 		
 		WebInfo w=new WebInfo("02324");
 		String[] test=w.setScene();
-		String pleasework="";
+		String pleasework="hello";
 		Text text=new Text();
-		
 		text.setX(50);
 		text.setY(50);
 		Group root=new Group(text);

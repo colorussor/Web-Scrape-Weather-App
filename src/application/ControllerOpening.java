@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
@@ -24,6 +25,8 @@ public class ControllerOpening implements Initializable {
 	@FXML
 	AnchorPane AnchorOpen;
 	@FXML
+	Label labeltest;
+	@FXML
 	// this is a method that will close ANY pane when called
 	private void closeButtonAction(){
 		Stage stage = (Stage) goButton.getScene().getWindow();
@@ -33,11 +36,11 @@ public class ControllerOpening implements Initializable {
 		String zipcode=zip.getText();
 		return zipcode;
 	}
-	
+
 	public ControllerOpening(){
-		
+
 	}
-	
+
 	public void initialize(URL location, ResourceBundle resources) {
 		// Pretty easy to understand, when you click the gobutton it opens the main application.
 		goButton.setOnAction(e->{
@@ -52,8 +55,13 @@ public class ControllerOpening implements Initializable {
 					stage.setScene(scene2);
 					stage.show();
 				}else {
-					System.out.print("bad ");
-					System.out.println(text.length());
+					Parent errorinput=FXMLLoader.load(getClass().getClassLoader().getResource("application/InputError.fxml"));
+					Scene scene2=new Scene(errorinput);
+					Stage stage=new Stage();
+					stage.setTitle("Weather Application");
+					stage.setScene(scene2);
+					stage.show();
+
 				}
 			} catch(Exception ex) {
 				ex.printStackTrace();
@@ -73,8 +81,12 @@ public class ControllerOpening implements Initializable {
 						stage.setScene(scene2);
 						stage.show();
 					}else {
-						System.out.print("bad");
-						System.out.println(text.length());
+						Parent errorinput=FXMLLoader.load(getClass().getClassLoader().getResource("application/InputError.fxml"));
+						Scene scene2=new Scene(errorinput);
+						Stage stage=new Stage();
+						stage.setTitle("Weather Application");
+						stage.setScene(scene2);
+						stage.show();
 					}
 				}
 			} catch(Exception exe) {
