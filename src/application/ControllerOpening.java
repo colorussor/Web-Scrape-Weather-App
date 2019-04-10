@@ -46,11 +46,12 @@ public class ControllerOpening implements Initializable {
 		goButton.setOnAction(e->{
 			try {
 				String text=getText();
-				if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
+				if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+") || text.matches("1")) {
 					closeButtonAction();
 					Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 					Scene scene2=new Scene(root2);
 					Stage stage=new Stage();
+					stage.setResizable(false);
 					stage.setTitle("Weather Application");
 					stage.setScene(scene2);
 					stage.show();
@@ -58,6 +59,7 @@ public class ControllerOpening implements Initializable {
 					Parent errorinput=FXMLLoader.load(getClass().getClassLoader().getResource("application/InputError.fxml"));
 					Scene scene2=new Scene(errorinput);
 					Stage stage=new Stage();
+					stage.setResizable(false);
 					stage.setTitle("Weather Application");
 					stage.setScene(scene2);
 					stage.show();
@@ -72,11 +74,12 @@ public class ControllerOpening implements Initializable {
 			try {
 				String text=getText();
 				if(ex.getCode()==KeyCode.ENTER) {
-					if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+")) {
+					if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+") || text.matches("1")) {
 						closeButtonAction();
 						Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 						Scene scene2=new Scene(root2);
 						Stage stage=new Stage();
+						stage.setResizable(false);
 						stage.setTitle("Weather Application");
 						stage.setScene(scene2);
 						stage.show();
@@ -84,6 +87,7 @@ public class ControllerOpening implements Initializable {
 						Parent errorinput=FXMLLoader.load(getClass().getClassLoader().getResource("application/InputError.fxml"));
 						Scene scene2=new Scene(errorinput);
 						Stage stage=new Stage();
+						stage.setResizable(false);
 						stage.setTitle("Weather Application");
 						stage.setScene(scene2);
 						stage.show();

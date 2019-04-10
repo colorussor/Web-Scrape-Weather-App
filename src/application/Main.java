@@ -37,6 +37,7 @@ public class Main extends Application implements Initializable {
 		    fxmlLoader.load();
 
 			Scene scene=new Scene(fxmlLoader.getRoot());
+			primaryStage.setResizable(false);
 			primaryStage.setTitle("Weather Application");
 			primaryStage.setScene(scene);
 			primaryStage.show();

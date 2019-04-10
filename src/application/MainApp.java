@@ -32,9 +32,9 @@ public class MainApp extends Application implements Initializable {
 	@FXML
 	ImageView dayfiveimage;
 	@FXML
-	ImageView currentcondoimage;
+	ImageView currentcondoimage=new ImageView();
 	@FXML
-	Text location;
+	Text location=new Text();
 	@FXML
 	Text currentday;
 	@FXML
@@ -67,23 +67,11 @@ public class MainApp extends Application implements Initializable {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
+		String j="hello";
+		location.setText(j);
 	}
 	public void start(Stage arg0) throws Exception {
-		
-		WebInfo w=new WebInfo("02324");
-		String[] test=w.setScene();
-		String pleasework="hello";
-		Text text=new Text();
-		text.setX(50);
-		text.setY(50);
-		Group root=new Group(text);
-		Scene scene=new Scene(root,100,100);
-		Stage stage=new Stage();
-		stage.setScene(scene);
-		stage.show();
-
-
+		location.setText("hello");
 	}
 	public static void main(String[] args) {
 		launch(args);
