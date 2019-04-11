@@ -69,6 +69,7 @@ public class MainApp extends Application implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		Icons icon = new Icons(6);
 		Image cloudy=new Image(getClass().getResourceAsStream(icon.getImage(6)));
+		Image partcloudy=new Image(getClass().getResourceAsStream(icon.getImage(10)));
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
@@ -78,8 +79,10 @@ public class MainApp extends Application implements Initializable {
 		location.setText(currentlocal);
 		currenttemp.setText(currentT);
 		currentcondit.setText(currentcond);
-		if(currentcond.contains("Cloudy")){
+		if(currentcond.equals("Cloudy")){
 			currentcondoimage.setImage(cloudy);
+		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy")) {
+			currentcondoimage.setImage(partcloudy);
 		}
 	}
 	public void start(Stage arg0) throws Exception {
