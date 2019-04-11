@@ -1,7 +1,8 @@
 .bodybg{
-	-fx-background-image: url("BostonSkyline.jpg");
+	-fx-background-image: url("BostonSkyline1.jpg");
+	
 }
 
 .bodycg{
-	
+	-fx-backgorund-image: url("BostonSkyline.jpg");
 }

@@ -38,11 +38,11 @@ public class MainApp extends Application implements Initializable {
 	@FXML
 	Text currentday;
 	@FXML
-	Text currentcondit;
+	Text currentcondit=new Text();
 	@FXML
-	Text currenttemp;
+	Text currenttemp=new Text();
 	@FXML
-	Text day1;
+	Text day1=new Text();;
 	@FXML
 	Text day2;
 	@FXML
@@ -67,17 +67,27 @@ public class MainApp extends Application implements Initializable {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		String j="Eggs in a Basket";
+		Icons icon = new Icons(6);
+		Image cloudy=new Image(getClass().getResourceAsStream(icon.getImage(6)));
+		String currentlocal=TEST.currentlocation();
+		String currentT=TEST.currenttemp();
+		String currentcond=TEST.currentcondos();
 		//***********BELOW is what we tried to make the location show up in the app
 		//ControllerOpening JustWork = new ControllerOpening();
 		//String j = JustWork.getZip();
-		location.setText(j);
+		location.setText(currentlocal);
+		currenttemp.setText(currentT);
+		currentcondit.setText(currentcond);
+		if(currentcond.contains("Cloudy")){
+			currentcondoimage.setImage(cloudy);
+		}
 	}
 	public void start(Stage arg0) throws Exception {
-		location.setText("hello");
+		System.out.println(ControllerOpening.boxZip);
 	}
 	public static void main(String[] args) {
 		launch(args);
+		System.out.println(ControllerOpening.boxZip);
 	}
 	
 	public static  void test() {

@@ -19,7 +19,7 @@ public class ControllerOpening implements Initializable {
 	
 	//**************This is the String that is used for the zipcode
 	//**************like "02115" from the box. 
-	public String boxZip="Didnt Work";
+	public static String boxZip="Didnt Work";
 	// the "Go" button for the opening fxml file..
 	@FXML
 	Button goButton;
