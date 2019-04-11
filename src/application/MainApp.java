@@ -67,7 +67,10 @@ public class MainApp extends Application implements Initializable {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		String j="hello";
+		String j="Eggs in a Basket";
+		//***********BELOW is what we tried to make the location show up in the app
+		//ControllerOpening JustWork = new ControllerOpening();
+		//String j = JustWork.getZip();
 		location.setText(j);
 	}
 	public void start(Stage arg0) throws Exception {

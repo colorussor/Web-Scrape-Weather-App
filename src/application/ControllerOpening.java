@@ -16,6 +16,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class ControllerOpening implements Initializable {
+	
+	//**************This is the String that is used for the zipcode
+	//**************like "02115" from the box. 
+	public String boxZip="Didnt Work";
 	// the "Go" button for the opening fxml file..
 	@FXML
 	Button goButton;
@@ -40,13 +44,22 @@ public class ControllerOpening implements Initializable {
 	public ControllerOpening(){
 
 	}
+	
+	//This is the "getter" for the zip code put in the box, which we called "boxZip"
+	public String getZip(){
+		return boxZip;
+	}
+	
 
 	public void initialize(URL location, ResourceBundle resources) {
 		// Pretty easy to understand, when you click the gobutton it opens the main application.
 		goButton.setOnAction(e->{
 			try {
-				String text=getText();
-				if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+") || text.matches("1")) {
+				//**************************************
+				//boxZip is the zipcode put into the box
+				//**************************************
+				boxZip=getText();
+				if(boxZip.length()<=6 && boxZip.length()>=5 && boxZip.matches("[0-9]+") || boxZip.matches("1")) {
 					closeButtonAction();
 					Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 					Scene scene2=new Scene(root2);
@@ -72,9 +85,9 @@ public class ControllerOpening implements Initializable {
 		// Zip is the text field, when the user hits enter it closes the pane and opens the main one. I need to change it so it will only close if a valid zipcode is entered
 		zip.setOnKeyPressed( ex->{
 			try {
-				String text=getText();
+				boxZip=getText();
 				if(ex.getCode()==KeyCode.ENTER) {
-					if(text.length()<=6 && text.length()>=5 && text.matches("[0-9]+") || text.matches("1")) {
+					if(boxZip.length()<=6 && boxZip.length()>=5 && boxZip.matches("[0-9]+") || boxZip.matches("1")) {
 						closeButtonAction();
 						Parent root2=FXMLLoader.load(getClass().getClassLoader().getResource("application/WeatherAppTest.fxml"));
 						Scene scene2=new Scene(root2);
@@ -99,7 +112,7 @@ public class ControllerOpening implements Initializable {
 
 			}
 		});
-
+		
 	}
 
 }
