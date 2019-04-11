@@ -14,7 +14,7 @@
             <Font size="59.0" />
          </font>
       </Text>
-      <ImageView fx:id="currentcondoimage" fitHeight="86.0" fitWidth="140.0" layoutX="436.0" layoutY="136.0" pickOnBounds="true">
+      <ImageView fx:id="currentcondoimage" fitHeight="86.0" fitWidth="140.0" layoutX="436.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pnqHVb.jpg" />
          </image>
@@ -109,5 +109,15 @@
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
+      <Text fx:id="currenttime" layoutX="147.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

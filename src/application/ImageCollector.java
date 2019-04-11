@@ -18,7 +18,7 @@ abstract public class ImageCollector {
 		  ppath[3] = "NIGHT.png";
 		  ppath[4] = "RAIN-SNOW.png";
 		  ppath[5] = "SUNNY.png";
-		  ppath[6] = "Cloudy-Icon.jpg";
+		  ppath[6] = "simple_weather_icons_cloudy.png";
 		  ppath[7] = "Drizzle.png";
 		  ppath[8] = "Fog-Icon.png";
 		  ppath[9] = "Inclament-Weather.png";

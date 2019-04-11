@@ -1,6 +1,7 @@
 package application;
 
 import java.net.URL;
+import java.time.LocalTime;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -62,6 +63,8 @@ public class MainApp extends Application implements Initializable {
 	@FXML
 	Text day5t;
 	@FXML
+	Text currenttime=new Text();
+	@FXML
 	AnchorPane AnchorMain;
 	protected static void texttest() {
 	}
@@ -73,6 +76,9 @@ public class MainApp extends Application implements Initializable {
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
+		LocalTime myObj = LocalTime.now();
+		String j=myObj.toString();
+		currenttime.setText(j);
 		//***********BELOW is what we tried to make the location show up in the app
 		//ControllerOpening JustWork = new ControllerOpening();
 		//String j = JustWork.getZip();
@@ -90,10 +96,9 @@ public class MainApp extends Application implements Initializable {
 	}
 	public static void main(String[] args) {
 		launch(args);
-		System.out.println(ControllerOpening.boxZip);
 	}
-	
+
 	public static  void test() {
-			
+
 	}
 }
