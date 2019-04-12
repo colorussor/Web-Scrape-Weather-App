@@ -108,6 +108,9 @@ public class MainApp extends Application implements Initializable {
 		Image fog=new Image(getClass().getResourceAsStream(icon.getImage(8)));
 		Image sunnybg=new Image(getClass().getResourceAsStream(icon.getImage(5)));
 		Image sunny=new Image(getClass().getResourceAsStream(icon.getImage(14)));
+		Image snowbg=new Image(getClass().getResourceAsStream(icon.getImage(4)));
+		Image snow=new Image(getClass().getResourceAsStream(icon.getImage(13)));
+		
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
@@ -122,9 +125,15 @@ public class MainApp extends Application implements Initializable {
 		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy")) {
 			currentcondoimage.setImage(partcloudy);
 			currentbg.setImage(cloudybg);
-		}else if(currentcond.equals("Sunny") || currentcond.equals("Sunny")) {
+		}else if(currentcond.equals("Sunny")) {
 			currentcondoimage.setImage(sunny);
 			currentbg.setImage(sunnybg);
+		}else if(currentcond.equals("Fog")) {
+			currentcondoimage.setImage(fog);
+			currentbg.setImage(cloudybg);
+		}else if(currentcond.equals("Snow")) {
+			currentcondoimage.setImage(snow);
+			currentbg.setImage(snowbg);
 		}
 	}
 	public void start(Stage arg0) throws Exception {
