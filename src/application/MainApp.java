@@ -108,11 +108,34 @@ public class MainApp extends Application implements Initializable {
 		Image fog=new Image(getClass().getResourceAsStream(icon.getImage(8)));
 		Image sunnybg=new Image(getClass().getResourceAsStream(icon.getImage(5)));
 		Image sunny=new Image(getClass().getResourceAsStream(icon.getImage(14)));
+		Image snowbg=new Image(getClass().getResourceAsStream(icon.getImage(4)));
+		Image snow=new Image(getClass().getResourceAsStream(icon.getImage(13)));
+		
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
+		String dayone=TEST.day();
+		String dayonetemp=TEST.dayTEMP();
+		String daytwo=TEST.day2();
+		String daytwotemp=TEST.dayTEMP2();
+		String daythree=TEST.day3();
+		String daythreetemp=TEST.dayTEMP3();
+		String dayfour=TEST.day4();
+		String dayfourtemp=TEST.dayTEMP4();
+		String dayfive=TEST.day5();
+		String dayfivetemp=TEST.dayTEMP5();
 		location.setText(currentlocal);
 		location.setTextAlignment(TextAlignment.CENTER);
+		day1.setText(dayone);
+		day1t.setText(dayonetemp);
+		day2.setText(daytwo);
+		day2t.setText(daytwotemp);
+		day3.setText(daythree);
+		day3t.setText(daythreetemp);
+		day4.setText(dayfour);
+		day4t.setText(dayfourtemp);
+		day5.setText(dayfive);
+		day5t.setText(dayfivetemp);
 		currenttemp.setText(currentT);
 		currentcondit.setText(currentcond);
 		currentcondit.setTextAlignment(TextAlignment.CENTER);
@@ -122,9 +145,15 @@ public class MainApp extends Application implements Initializable {
 		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy")) {
 			currentcondoimage.setImage(partcloudy);
 			currentbg.setImage(cloudybg);
-		}else if(currentcond.equals("Sunny") || currentcond.equals("Sunny")) {
+		}else if(currentcond.equals("Sunny")) {
 			currentcondoimage.setImage(sunny);
 			currentbg.setImage(sunnybg);
+		}else if(currentcond.equals("Fog")) {
+			currentcondoimage.setImage(fog);
+			currentbg.setImage(cloudybg);
+		}else if(currentcond.equals("Snow")) {
+			currentcondoimage.setImage(snow);
+			currentbg.setImage(snowbg);
 		}
 	}
 	public void start(Stage arg0) throws Exception {

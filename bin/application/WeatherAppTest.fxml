@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="AnchorMain" maxHeight="500.0" maxWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainApp">
+<AnchorPane fx:id="AnchorMain" maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainApp">
    <children>
-      <ImageView fx:id="currentbg" fitHeight="539.0" fitWidth="1049.0" pickOnBounds="true" />
+      <ImageView fx:id="currentbg" fitHeight="539.0" fitWidth="1049.0" layoutX="-4.0" pickOnBounds="true" />
       <ImageView fx:id="currentcondoimage" fitHeight="86.0" fitWidth="140.0" layoutX="450.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pnqHVb.jpg" />
@@ -21,82 +21,82 @@
             <Font name="Calibri Light" size="32.0" />
          </font>
       </Text>
-      <Line endX="524.0" layoutX="524.0" layoutY="411.0" startX="-526.0" />
-      <Text fx:id="day1" layoutX="39.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day One">
+      <Line endX="474.0" layoutX="526.0" layoutY="368.0" startX="-526.0" />
+      <Text fx:id="day1" layoutX="54.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tonight" wrappingWidth="130.53368198499084">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day1t" layoutX="73.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+      <Text fx:id="day1t" layoutX="72.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Line endX="-94.5" endY="116.0" layoutX="298.0" layoutY="420.0" startX="-94.5" startY="8.0" />
-      <Text fx:id="day2" layoutX="235.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Two">
+      <Line endX="-94.5" endY="116.0" layoutX="297.0" layoutY="374.0" startX="-94.5" startY="8.0" />
+      <Text fx:id="day2" layoutX="273.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day2t" layoutX="269.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+      <Text fx:id="day2t" layoutX="269.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Line endX="-94.5" endY="116.0" layoutX="480.0" layoutY="420.0" startX="-94.5" startY="8.0" />
-      <Text fx:id="day4" layoutX="653.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Four">
+      <Line endX="-94.5" endY="116.0" layoutX="480.0" layoutY="374.0" startX="-94.5" startY="8.0" />
+      <Text fx:id="day4" layoutX="685.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day3" layoutX="431.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Three">
+      <Text fx:id="day3" layoutX="467.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day5" layoutX="879.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Five">
+      <Text fx:id="day5" layoutX="899.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day5t" layoutX="913.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+      <Text fx:id="day5t" layoutX="895.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Text fx:id="day4t" layoutX="681.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+      <Text fx:id="day4t" layoutX="681.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Text fx:id="day3t" layoutX="463.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
+      <Text fx:id="day3t" layoutX="463.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Line endX="-94.5" endY="116.0" layoutX="932.0" layoutY="420.0" startX="-94.5" startY="8.0" />
-      <Line endX="-94.5" endY="116.0" layoutX="690.0" layoutY="420.0" startX="-94.5" startY="8.0" />
-      <ImageView fx:id="dayoneimage" fitHeight="50.0" fitWidth="50.0" layoutX="80.0" layoutY="457.0" pickOnBounds="true">
+      <Line endX="-94.5" endY="116.0" layoutX="931.0" layoutY="374.0" startX="-94.5" startY="8.0" />
+      <Line endX="-94.5" endY="116.0" layoutX="684.0" layoutY="374.0" startX="-94.5" startY="8.0" />
+      <ImageView fx:id="dayoneimage" fitHeight="50.0" fitWidth="50.0" layoutX="76.0" layoutY="411.0" pickOnBounds="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="daytwoimage" fitHeight="50.0" fitWidth="50.0" layoutX="273.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="daytwoimage" fitHeight="50.0" fitWidth="50.0" layoutX="273.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="daythreeimage" fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="daythreeimage" fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="dayfourimage" fitHeight="50.0" fitWidth="50.0" layoutX="685.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dayfourimage" fitHeight="50.0" fitWidth="50.0" layoutX="685.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="dayfiveimage" fitHeight="50.0" fitWidth="50.0" layoutX="915.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dayfiveimage" fitHeight="50.0" fitWidth="50.0" layoutX="899.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
