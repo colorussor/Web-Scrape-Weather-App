@@ -91,7 +91,7 @@ public class MainApp extends Application implements Initializable {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
 		Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {        
 			Calendar cal=Calendar.getInstance();
 			currenttime.setText(format.format(cal.getTime()));
@@ -100,7 +100,7 @@ public class MainApp extends Application implements Initializable {
 				);
 		clock.setCycleCount(Animation.INDEFINITE);
 		clock.play();
-		
+
 		Icons icon = new Icons(6);
 		Image cloudy=new Image(getClass().getResourceAsStream(icon.getImage(6)));
 		Image cloudybg=new Image(getClass().getResourceAsStream(icon.getImage(1)));
@@ -110,20 +110,27 @@ public class MainApp extends Application implements Initializable {
 		Image sunny=new Image(getClass().getResourceAsStream(icon.getImage(14)));
 		Image snowbg=new Image(getClass().getResourceAsStream(icon.getImage(4)));
 		Image snow=new Image(getClass().getResourceAsStream(icon.getImage(13)));
-		
+		Image rain=new Image(getClass().getResourceAsStream(icon.getImage(11)));
+
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
 		String dayone=TEST.day();
+		String dayonec=TEST.dayCONDO();
 		String dayonetemp=TEST.dayTEMP();
 		String daytwo=TEST.day2();
+		String daytwoc=TEST.day2CONDO();
 		String daytwotemp=TEST.dayTEMP2();
 		String daythree=TEST.day3();
+		String daythreec=TEST.day3CONDO();
 		String daythreetemp=TEST.dayTEMP3();
 		String dayfour=TEST.day4();
+		String dayfourc=TEST.day4CONDO();
 		String dayfourtemp=TEST.dayTEMP4();
 		String dayfive=TEST.day5();
+		String dayfivec=TEST.day5CONDO();
 		String dayfivetemp=TEST.dayTEMP5();
+
 		location.setText(currentlocal);
 		location.setTextAlignment(TextAlignment.CENTER);
 		day1.setText(dayone);
@@ -139,6 +146,58 @@ public class MainApp extends Application implements Initializable {
 		currenttemp.setText(currentT);
 		currentcondit.setText(currentcond);
 		currentcondit.setTextAlignment(TextAlignment.CENTER);
+
+		// RAIN
+		if(dayonec.contains("Rain")) {
+			dayoneimage.setImage(rain);
+		}
+		if(daytwoc.contains("Rain")) {
+			daytwoimage.setImage(rain);
+		}
+		if(daythreec.contains("Rain")) {
+			daythreeimage.setImage(rain);
+		}
+		if(dayfourc.contains("Rain")) {
+			dayfourimage.setImage(rain);
+		}
+		if(dayfivec.contains("Rain")) {
+			dayfiveimage.setImage(rain);
+		}
+
+		// SUNNY
+		if(dayonec.contains("Sunny")) {
+			dayoneimage.setImage(sunny);
+		}
+		if(daytwoc.contains("Sunny")) {
+			daytwoimage.setImage(sunny);
+		}
+		if(daythreec.contains("Sunny")) {
+			daythreeimage.setImage(sunny);
+		}
+		if(dayfourc.contains("Sunny")) {
+			dayfourimage.setImage(sunny);
+		}
+		if(dayfivec.contains("Sunny")) {
+			dayfiveimage.setImage(sunny);
+		}
+
+		// Cloudy
+		if(dayonec.equals("Mostly Cloudy") || dayonec.equals("Mostly Cloudy")) {
+			dayoneimage.setImage(partcloudy);
+		}
+		if(daytwoc.equals("Partly Cloudy") || daytwoc.equals("Mostly Cloudy")) {
+			daytwoimage.setImage(partcloudy);
+		}
+		if(daythreec.equals("Party Cloudy") || daythreec.equals("Mostly Cloudy")) {
+			daythreeimage.setImage(partcloudy);
+		}
+		if(dayfourc.equals("Partly Cloudy") || dayfourc.equals("Mostly Cloudy")) {
+			dayfourimage.setImage(partcloudy);
+		}
+		if(dayfivec.equals("Partly Cloudy") || dayfivec.equals("Mostly Cloudy")) {
+			dayfiveimage.setImage(partcloudy);
+		}
+
 		if(currentcond.equals("Cloudy")){
 			currentcondoimage.setImage(cloudy);
 			currentbg.setImage(cloudybg);
@@ -154,6 +213,8 @@ public class MainApp extends Application implements Initializable {
 		}else if(currentcond.equals("Snow")) {
 			currentcondoimage.setImage(snow);
 			currentbg.setImage(snowbg);
+		}else if(dayonec.equals("Rain")) {
+			dayoneimage.setImage(rain);
 		}
 	}
 	public void start(Stage arg0) throws Exception {
@@ -164,6 +225,6 @@ public class MainApp extends Application implements Initializable {
 	}
 
 	public static  void test() {
-		
+
 	}
 }
