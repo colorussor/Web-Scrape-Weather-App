@@ -1,15 +1,24 @@
 package application;
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
+import javax.swing.GroupLayout.Alignment;
+
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,7 +28,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class MainApp extends Application implements Initializable {
 	@FXML
@@ -66,25 +77,37 @@ public class MainApp extends Application implements Initializable {
 	Text currenttime=new Text();
 	@FXML
 	AnchorPane AnchorMain;
+	
+	DateFormat format = DateFormat.getInstance();
 	protected static void texttest() {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {        
+			Calendar cal=Calendar.getInstance();
+			currenttime.setText(format.format(cal.getTime()));
+		}),
+				new KeyFrame(Duration.seconds(1))
+				);
+		clock.setCycleCount(Animation.INDEFINITE);
+		clock.play();
+		
 		Icons icon = new Icons(6);
 		Image cloudy=new Image(getClass().getResourceAsStream(icon.getImage(6)));
 		Image partcloudy=new Image(getClass().getResourceAsStream(icon.getImage(10)));
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
-		LocalTime myObj = LocalTime.now();
-		String j=myObj.toString();
-		currenttime.setText(j);
 		//***********BELOW is what we tried to make the location show up in the app
 		//ControllerOpening JustWork = new ControllerOpening();
 		//String j = JustWork.getZip();
 		location.setText(currentlocal);
+		location.setTextAlignment(TextAlignment.CENTER);
 		currenttemp.setText(currentT);
+		currenttemp.setTextAlignment(TextAlignment.CENTER);
 		currentcondit.setText(currentcond);
+		currentcondit.setTextAlignment(TextAlignment.CENTER);
 		if(currentcond.equals("Cloudy")){
 			currentcondoimage.setImage(cloudy);
 		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy")) {
