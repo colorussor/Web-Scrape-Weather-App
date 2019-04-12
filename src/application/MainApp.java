@@ -27,6 +27,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
@@ -77,7 +80,10 @@ public class MainApp extends Application implements Initializable {
 	Text currenttime=new Text();
 	@FXML
 	AnchorPane AnchorMain;
-	
+	@FXML
+	StackPane ct=new StackPane();
+	@FXML
+	StackPane cl=new StackPane();
 	DateFormat format = DateFormat.getInstance();
 	protected static void texttest() {
 	}
@@ -103,9 +109,7 @@ public class MainApp extends Application implements Initializable {
 		//ControllerOpening JustWork = new ControllerOpening();
 		//String j = JustWork.getZip();
 		location.setText(currentlocal);
-		location.setTextAlignment(TextAlignment.CENTER);
 		currenttemp.setText(currentT);
-		currenttemp.setTextAlignment(TextAlignment.CENTER);
 		currentcondit.setText(currentcond);
 		currentcondit.setTextAlignment(TextAlignment.CENTER);
 		if(currentcond.equals("Cloudy")){
@@ -122,6 +126,6 @@ public class MainApp extends Application implements Initializable {
 	}
 
 	public static  void test() {
-
+		
 	}
 }

@@ -30,6 +30,7 @@ public class InputErrorController implements Initializable {
 	}
 	
 	public void initialize(URL location, ResourceBundle resources) {
+	
 		okButton.setOnAction(e->{
 			try {
 			closeButtonAction();

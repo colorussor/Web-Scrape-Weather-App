@@ -3,28 +3,19 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="AnchorMain" maxHeight="500.0" maxWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainApp">
    <children>
-      <Text fx:id="location" layoutX="347.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current day">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
       <ImageView fx:id="currentcondoimage" fitHeight="86.0" fitWidth="140.0" layoutX="436.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pnqHVb.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="currenttemp" layoutX="436.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Temp">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Text>
-      <Text fx:id="currentcondit" layoutX="461.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
+      <Text fx:id="currentcondit" layoutX="463.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
          <font>
             <Font size="18.0" />
          </font>
@@ -109,9 +100,24 @@
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="currenttime" layoutX="31.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+      <Text fx:id="currenttime" layoutX="21.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
          <font>
-            <Font size="33.0" />
+            <Font name="Calibri Light" size="33.0" />
+         </font>
+      </Text>
+      <StackPane fx:id="cl" layoutX="386.0" layoutY="247.0" prefHeight="44.0" prefWidth="178.0">
+         <children>
+            <Text fx:id="currenttemp" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Temp">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <StackPane fx:id="cl" layoutX="366.0" layoutY="42.0" />
+      <Text fx:id="location" layoutX="246.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current day" textOrigin="CENTER">
+         <font>
+            <Font name="Calibri Light" size="59.0" />
          </font>
       </Text>
    </children>

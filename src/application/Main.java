@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -34,29 +35,31 @@ public class Main extends Application implements Initializable {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Opening.fxml"));
-		    fxmlLoader.load();
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Opening.fxml"));
+			fxmlLoader.load();
 
 			Scene scene=new Scene(fxmlLoader.getRoot());
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("Weather Application");
+			primaryStage.initStyle(StageStyle.DECORATED);
+			primaryStage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			
-			
+
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
