@@ -17,11 +17,17 @@ public class WebInfo {
 	private Elements feel;
 	private Elements hilo;
 	private Elements day;
+	private Elements dayTemp;
 	private Elements day2;
+	private Elements dayTemp2;
 	private Elements day3;
+	private Elements dayTemp3;
 	private Elements day4;
+	private Elements dayTemp4;
 	private Elements day5;
+	private Elements dayTemp5;
 	private Elements day6;
+	private Elements dayTemp6;
 	
 	
 	
