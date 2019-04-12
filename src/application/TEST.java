@@ -147,5 +147,135 @@ public class TEST {
 		return weather[2];
 
 	}
+	public static String day() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[5];
+
+	}
+	public static String dayTEMP() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[6];
+
+	}
+	public static String day2() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[7];
+
+	}
+	public static String dayTEMP2() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[8];
+
+	}
+	public static String day3() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[9];
+
+	}
+	public static String dayTEMP3() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[10];
+
+	}
+	public static String day4() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[11];
+
+	}
+	public static String dayTEMP4() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[12];
+
+	}
+	public static String day5() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[13];
+
+	}
+	public static String dayTEMP5() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[14];
+
+	}
 }
 
