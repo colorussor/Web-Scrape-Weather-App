@@ -105,6 +105,7 @@ public class MainApp extends Application implements Initializable {
 		Image cloudy=new Image(getClass().getResourceAsStream(icon.getImage(6)));
 		Image cloudybg=new Image(getClass().getResourceAsStream(icon.getImage(1)));
 		Image partcloudy=new Image(getClass().getResourceAsStream(icon.getImage(10)));
+		Image fog=new Image(getClass().getResourceAsStream(icon.getImage(8)));
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
