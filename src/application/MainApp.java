@@ -84,6 +84,8 @@ public class MainApp extends Application implements Initializable {
 	StackPane ct=new StackPane();
 	@FXML
 	StackPane cl=new StackPane();
+	@FXML
+	ImageView currentbg=new ImageView();
 	DateFormat format = DateFormat.getInstance();
 	protected static void texttest() {
 	}
@@ -101,6 +103,7 @@ public class MainApp extends Application implements Initializable {
 		
 		Icons icon = new Icons(6);
 		Image cloudy=new Image(getClass().getResourceAsStream(icon.getImage(6)));
+		Image cloudybg=new Image(getClass().getResourceAsStream(icon.getImage(1)));
 		Image partcloudy=new Image(getClass().getResourceAsStream(icon.getImage(10)));
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
@@ -112,8 +115,10 @@ public class MainApp extends Application implements Initializable {
 		currentcondit.setTextAlignment(TextAlignment.CENTER);
 		if(currentcond.equals("Cloudy")){
 			currentcondoimage.setImage(cloudy);
+			currentbg.setImage(cloudybg);
 		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy")) {
 			currentcondoimage.setImage(partcloudy);
+			currentbg.setImage(cloudybg);
 		}
 	}
 	public void start(Stage arg0) throws Exception {
