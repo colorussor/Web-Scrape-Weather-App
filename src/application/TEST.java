@@ -277,5 +277,71 @@ public class TEST {
 		return weather[14];
 
 	}
+	public static String dayCONDO() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[15];
+
+	}
+	public static String day2CONDO() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[16];
+
+	}
+	public static String day3CONDO() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[17];
+
+	}
+	public static String day4CONDO() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[18];
+
+	}
+	public static String day5CONDO() {
+		String zip = ControllerOpening.boxZip;
+
+		WebInfo w = new WebInfo(zip);
+
+		w.testWeb();	
+	
+		String[] weather = w.setScene();
+
+	
+		return weather[19];
+
+	}
+	
 }
 

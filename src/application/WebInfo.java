@@ -18,16 +18,21 @@ public class WebInfo {
 	private Elements hilo;
 	private Elements day;
 	private Elements dayTemp;
+	private Elements dayCONDO;
 	private Elements day2;
 	private Elements dayTemp2;
+	private Elements day2CONDO;
 	private Elements day3;
 	private Elements dayTemp3;
+	private Elements day3CONDO;
 	private Elements day4;
 	private Elements dayTemp4;
+	private Elements day4CONDO;
 	private Elements day5;
 	private Elements dayTemp5;
-	private Elements day6;
-	private Elements dayTemp6;
+	private Elements day5CONDO;
+	//private Elements day6;
+	//private Elements dayTemp6;
 	
 	
 	
@@ -79,7 +84,13 @@ public class WebInfo {
 			list.add(dayTemp4.get(i).text());
 			list.add(day5.get(i).text()); //Fifth of the 5 day
 			list.add(dayTemp5.get(i).text());
-
+			//The following are for the conditions images
+			list.add(dayCONDO.get(i).text()); //15
+			list.add(day2CONDO.get(i).text()); //16
+			list.add(day3CONDO.get(i).text()); //17
+			list.add(day4CONDO.get(i).text()); //18
+			list.add(day5CONDO.get(i).text()); //19
+			
 			String[] weather = new String[list.size()];
 			for(int x = 0; x < weather.length; x++) {
 				weather[x] = list.get(x);
@@ -106,14 +117,19 @@ public class WebInfo {
 			//Elements day = five_day.select("span.date-time");
 			day = five_day.select("td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
 			dayTemp = five_day.select("tr.closed.clickable:nth-of-type(1) > .temp");
+			dayCONDO = five_day.select("tr.closed.clickable:nth-of-type(1) > .description > span");
 			day2 = five_day.select("tr.closed.clickable:nth-of-type(2) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
 			dayTemp2 = five_day.select("tr.closed.clickable:nth-of-type(2) > .temp");
+			day2CONDO = five_day.select("tr.closed.clickable:nth-of-type(2) > .description > span");
 			day3 = five_day.select("tr.closed.clickable:nth-of-type(3) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
 			dayTemp3 = five_day.select("tr.closed.clickable:nth-of-type(3) > .temp > div");
+			day3CONDO = five_day.select("tr.closed.clickable:nth-of-type(3) > .description > span");
 			day4 = five_day.select("tr.closed.clickable:nth-of-type(4) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
 			dayTemp4 = five_day.select("tr.closed.clickable:nth-of-type(4) > .temp > div");
+			day4CONDO = five_day.select("tr.closed.clickable:nth-of-type(4) > .description > span");
 			day5 = five_day.select("tr.closed.clickable:nth-of-type(5) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
 			dayTemp5 = five_day.select("tr.closed.clickable:nth-of-type(5) > .temp > div");
+			day5CONDO = five_day.select("tr.closed.clickable:nth-of-type(5) > .description > span");
 			return true;
 		}catch (IOException e) {
 			e.printStackTrace();
