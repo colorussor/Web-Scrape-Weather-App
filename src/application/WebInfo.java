@@ -90,6 +90,7 @@ public class WebInfo {
 			list.add(day3CONDO.get(i).text()); //17
 			list.add(day4CONDO.get(i).text()); //18
 			list.add(day5CONDO.get(i).text()); //19
+			//Array
 			
 			String[] weather = new String[list.size()];
 			for(int x = 0; x < weather.length; x++) {

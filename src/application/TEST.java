@@ -338,7 +338,7 @@ public class TEST {
 	
 		String[] weather = w.setScene();
 
-	
+		//Final Element in the array
 		return weather[19];
 
 	}
