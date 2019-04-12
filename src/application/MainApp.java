@@ -105,10 +105,8 @@ public class MainApp extends Application implements Initializable {
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
-		//***********BELOW is what we tried to make the location show up in the app
-		//ControllerOpening JustWork = new ControllerOpening();
-		//String j = JustWork.getZip();
 		location.setText(currentlocal);
+		location.setTextAlignment(TextAlignment.CENTER);
 		currenttemp.setText(currentT);
 		currentcondit.setText(currentcond);
 		currentcondit.setTextAlignment(TextAlignment.CENTER);

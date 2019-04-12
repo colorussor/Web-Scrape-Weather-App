@@ -3,18 +3,26 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="AnchorOpen" maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" styleClass="bodybg" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerOpening">
+<AnchorPane fx:id="AnchorOpen" maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerOpening">
    <children>
-      <Button fx:id="goButton" layoutX="474.0" layoutY="238.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="GO">
+      <ImageView fitHeight="587.0" fitWidth="1081.0" layoutX="-41.0" layoutY="-28.0" pickOnBounds="true">
+         <image>
+            <Image url="@BostonSkyline1.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="goButton" layoutX="474.0" layoutY="225.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="GO">
          <effect>
             <Lighting>
                <bumpInput>
@@ -25,18 +33,30 @@
                </light>
             </Lighting>
          </effect></Button>
-      <Text layoutX="364.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather App">
+      <Text layoutX="366.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Light Skies">
          <font>
-            <Font name="Calibri Bold" size="51.0" />
+            <Font name="Calibri Bold" size="62.0" />
          </font>
          <fill>
             <LinearGradient endX="1.0" endY="1.0" startX="0.2571428571428571">
                <stops>
-                  <Stop color="#e80c0c" />
-                  <Stop color="BLACK" offset="1.0" />
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
                </stops>
             </LinearGradient>
          </fill>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Glow level="1.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <Text fill="WHITE" layoutX="429.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a U.S. Zipcode below">
          <effect>
             <Lighting>
                <bumpInput>
@@ -46,9 +66,7 @@
                   <Light.Distant />
                </light>
             </Lighting>
-         </effect>
-      </Text>
-      <Text fill="WHITE" layoutX="430.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a U.S. Zipcode below" />
+         </effect></Text>
       <TextField fx:id="zip" layoutX="426.0" layoutY="178.0" onKeyPressed="#closeButtonAction">
          <effect>
             <ColorAdjust brightness="0.05">

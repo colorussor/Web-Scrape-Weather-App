@@ -102,7 +102,7 @@ public class TEST {
 
 		w.testWeb();	
 		// PUT IT BACK WHEN YOU'RE DONE!!!!
-		// w.printString();
+		 // w.printString();
 		String[] weather = w.setScene();
 
 		//for(int z=0; z<weather.length; z++) {
@@ -118,13 +118,9 @@ public class TEST {
 		WebInfo w = new WebInfo(zip);
 
 		w.testWeb();	
-		// PUT IT BACK WHEN YOU'RE DONE!!!!
-		// w.printString();
+	
 		String[] weather = w.setScene();
 
-		//for(int z=0; z<weather.length; z++) {
-		//System.out.println(weather[z]);
-		//}
 		return weather[0];
 	}
 	public static String currenttemp() {
@@ -133,13 +129,9 @@ public class TEST {
 		WebInfo w = new WebInfo(zip);
 
 		w.testWeb();	
-		// PUT IT BACK WHEN YOU'RE DONE!!!!
-		// w.printString();
+
 		String[] weather = w.setScene();
 
-		//for(int z=0; z<weather.length; z++) {
-		//System.out.println(weather[z]);
-		//}
 		return weather[1];
 	}
 	public static String currentcondos() {
@@ -148,13 +140,10 @@ public class TEST {
 		WebInfo w = new WebInfo(zip);
 
 		w.testWeb();	
-		// PUT IT BACK WHEN YOU'RE DONE!!!!
-		// w.printString();
+	
 		String[] weather = w.setScene();
 
-		//for(int z=0; z<weather.length; z++) {
-		//System.out.println(weather[z]);
-		//}
+	
 		return weather[2];
 
 	}

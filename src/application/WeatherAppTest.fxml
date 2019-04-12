@@ -114,8 +114,7 @@
             </Text>
          </children>
       </StackPane>
-      <StackPane fx:id="cl" layoutX="366.0" layoutY="42.0" />
-      <Text fx:id="location" layoutX="246.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current day" textOrigin="CENTER">
+      <Text fx:id="location" layoutX="269.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current day" textOrigin="CENTER">
          <font>
             <Font name="Calibri Light" size="59.0" />
          </font>

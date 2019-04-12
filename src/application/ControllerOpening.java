@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -65,6 +66,7 @@ public class ControllerOpening implements Initializable {
 					Scene scene2=new Scene(root2);
 					Stage stage=new Stage();
 					stage.setResizable(false);
+					stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 					stage.setTitle("Weather Application");
 					stage.setScene(scene2);
 					stage.show();
@@ -74,6 +76,7 @@ public class ControllerOpening implements Initializable {
 					Stage stage=new Stage();
 					stage.setResizable(false);
 					stage.setTitle("Weather Application");
+					stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 					stage.setScene(scene2);
 					stage.show();
 
@@ -94,6 +97,7 @@ public class ControllerOpening implements Initializable {
 						Stage stage=new Stage();
 						stage.setResizable(false);
 						stage.setTitle("Weather Application");
+						stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 						stage.setScene(scene2);
 						stage.show();
 					}else {
@@ -102,6 +106,7 @@ public class ControllerOpening implements Initializable {
 						Stage stage=new Stage();
 						stage.setResizable(false);
 						stage.setTitle("Weather Application");
+						stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 						stage.setScene(scene2);
 						stage.show();
 					}
