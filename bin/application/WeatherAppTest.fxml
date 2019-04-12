@@ -22,7 +22,7 @@
          </font>
       </Text>
       <Line endX="474.0" layoutX="526.0" layoutY="368.0" startX="-526.0" />
-      <Text fx:id="day1" layoutX="36.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day One" wrappingWidth="130.53368198499084">
+      <Text fx:id="day1" layoutX="54.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tonight" wrappingWidth="130.53368198499084">
          <font>
             <Font size="33.0" />
          </font>
@@ -33,7 +33,7 @@
          </font>
       </Text>
       <Line endX="-94.5" endY="116.0" layoutX="297.0" layoutY="374.0" startX="-94.5" startY="8.0" />
-      <Text fx:id="day2" layoutX="235.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Two">
+      <Text fx:id="day2" layoutX="273.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
@@ -44,17 +44,17 @@
          </font>
       </Text>
       <Line endX="-94.5" endY="116.0" layoutX="480.0" layoutY="374.0" startX="-94.5" startY="8.0" />
-      <Text fx:id="day4" layoutX="652.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Four">
+      <Text fx:id="day4" layoutX="685.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day3" layoutX="427.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Three">
+      <Text fx:id="day3" layoutX="467.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day5" layoutX="863.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day Five">
+      <Text fx:id="day5" layoutX="899.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
