@@ -40,7 +40,7 @@ public class Main extends Application implements Initializable {
 
 			Scene scene=new Scene(fxmlLoader.getRoot());
 			primaryStage.setResizable(false);
-			primaryStage.setTitle("Weather Application");
+			primaryStage.setTitle("Light Skies");
 			primaryStage.initStyle(StageStyle.DECORATED);
 			primaryStage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 			primaryStage.setScene(scene);

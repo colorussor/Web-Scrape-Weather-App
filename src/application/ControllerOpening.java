@@ -67,7 +67,7 @@ public class ControllerOpening implements Initializable {
 					Stage stage=new Stage();
 					stage.setResizable(false);
 					stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
-					stage.setTitle("Weather Application");
+					stage.setTitle("Light Skies");
 					stage.setScene(scene2);
 					stage.show();
 				}else {
