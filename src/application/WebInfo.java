@@ -70,10 +70,15 @@ public class WebInfo {
 			list.add(feel.get(i).text()); //"Feels like ______"
 			list.add(hilo.get(i).text()); //High/Low temp
 			list.add(day.get(i).text()); //First of the 5 day
+			list.add(dayTemp.get(i).text());
 			list.add(day2.get(i).text()); //Second of the 5 day
+			list.add(dayTemp2.get(i).text());
 			list.add(day3.get(i).text()); //Third of the 5 day
+			list.add(dayTemp3.get(i).text());
 			list.add(day4.get(i).text()); //Fourth of the 5 day
+			list.add(dayTemp4.get(i).text());
 			list.add(day5.get(i).text()); //Fifth of the 5 day
+			list.add(dayTemp5.get(i).text());
 
 			String[] weather = new String[list.size()];
 			for(int x = 0; x < weather.length; x++) {
@@ -99,12 +104,16 @@ public class WebInfo {
 			hilo = document.select("div.today_nowcard-hilo");
 			
 			//Elements day = five_day.select("span.date-time");
-			day = five_day.select("tr.closed.clickable:nth-of-type(1)");
-			day2 = five_day.select("tr.closed.clickable:nth-of-type(2)");
-			day3 = five_day.select("tr.closed.clickable:nth-of-type(3)");
-			day4 = five_day.select("tr.closed.clickable:nth-of-type(4)");
-			day5 = five_day.select("tr.closed.clickable:nth-of-type(5)");
-			day6 = five_day.select("tr.closed.clickable:nth-of-type(6)");
+			day = five_day.select("td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
+			dayTemp = five_day.select("tr.closed.clickable:nth-of-type(1) > .temp");
+			day2 = five_day.select("tr.closed.clickable:nth-of-type(2) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
+			dayTemp2 = five_day.select("tr.closed.clickable:nth-of-type(2) > .temp");
+			day3 = five_day.select("tr.closed.clickable:nth-of-type(3) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
+			dayTemp3 = five_day.select("tr.closed.clickable:nth-of-type(3) > .temp > div");
+			day4 = five_day.select("tr.closed.clickable:nth-of-type(4) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
+			dayTemp4 = five_day.select("tr.closed.clickable:nth-of-type(4) > .temp > div");
+			day5 = five_day.select("tr.closed.clickable:nth-of-type(5) > td.twc-sticky-col:nth-of-type(2) > div > div > .date-time");
+			dayTemp5 = five_day.select("tr.closed.clickable:nth-of-type(5) > .temp > div");
 			return true;
 		}catch (IOException e) {
 			e.printStackTrace();
