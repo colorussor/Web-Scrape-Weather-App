@@ -37,45 +37,45 @@ import javafx.util.Duration;
 
 public class MainApp extends Application implements Initializable {
 	@FXML
-	ImageView dayoneimage;
+	ImageView dayoneimage=new ImageView();
 	@FXML
-	ImageView daytwoimage;
+	ImageView daytwoimage=new ImageView();
 	@FXML
-	ImageView daythreeimage;
+	ImageView daythreeimage=new ImageView();
 	@FXML
-	ImageView dayfourimage;
+	ImageView dayfourimage=new ImageView();
 	@FXML
-	ImageView dayfiveimage;
+	ImageView dayfiveimage=new ImageView();
 	@FXML
 	ImageView currentcondoimage=new ImageView();
 	@FXML
 	Text location=new Text();
 	@FXML
-	Text currentday;
+	Text currentday=new Text();
 	@FXML
 	Text currentcondit=new Text();
 	@FXML
 	Text currenttemp=new Text();
 	@FXML
-	Text day1=new Text();;
+	Text day1=new Text();
 	@FXML
-	Text day2;
+	Text day2=new Text();
 	@FXML
-	Text day3;
+	Text day3=new Text();
 	@FXML
-	Text day4;
+	Text day4=new Text();
 	@FXML
-	Text day5;
+	Text day5=new Text();
 	@FXML
-	Text day1t;
+	Text day1t=new Text();
 	@FXML
-	Text day2t;
+	Text day2t=new Text();
 	@FXML	
-	Text day3t;
+	Text day3t=new Text();
 	@FXML
-	Text day4t;
+	Text day4t=new Text();
 	@FXML
-	Text day5t;
+	Text day5t=new Text();
 	@FXML
 	Text currenttime=new Text();
 	@FXML
@@ -106,6 +106,8 @@ public class MainApp extends Application implements Initializable {
 		Image cloudybg=new Image(getClass().getResourceAsStream(icon.getImage(1)));
 		Image partcloudy=new Image(getClass().getResourceAsStream(icon.getImage(10)));
 		Image fog=new Image(getClass().getResourceAsStream(icon.getImage(8)));
+		Image sunnybg=new Image(getClass().getResourceAsStream(icon.getImage(5)));
+		Image sunny=new Image(getClass().getResourceAsStream(icon.getImage(14)));
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
@@ -120,6 +122,9 @@ public class MainApp extends Application implements Initializable {
 		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy")) {
 			currentcondoimage.setImage(partcloudy);
 			currentbg.setImage(cloudybg);
+		}else if(currentcond.equals("Sunny") || currentcond.equals("Sunny")) {
+			currentcondoimage.setImage(sunny);
+			currentbg.setImage(sunnybg);
 		}
 	}
 	public void start(Stage arg0) throws Exception {

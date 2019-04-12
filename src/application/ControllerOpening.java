@@ -17,7 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class ControllerOpening implements Initializable {
-	
+
 	//**************This is the String that is used for the zipcode
 	//**************like "02115" from the box. 
 	public static String boxZip="Didnt Work";
@@ -45,12 +45,12 @@ public class ControllerOpening implements Initializable {
 	public ControllerOpening(){
 
 	}
-	
+
 	//This is the "getter" for the zip code put in the box, which we called "boxZip"
 	public String getZip(){
 		return boxZip;
 	}
-	
+
 
 	public void initialize(URL location, ResourceBundle resources) {
 		// Pretty easy to understand, when you click the gobutton it opens the main application.
@@ -75,7 +75,7 @@ public class ControllerOpening implements Initializable {
 					Scene scene2=new Scene(errorinput);
 					Stage stage=new Stage();
 					stage.setResizable(false);
-					stage.setTitle("Weather Application");
+					stage.setTitle("Light Skies");
 					stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 					stage.setScene(scene2);
 					stage.show();
@@ -96,7 +96,7 @@ public class ControllerOpening implements Initializable {
 						Scene scene2=new Scene(root2);
 						Stage stage=new Stage();
 						stage.setResizable(false);
-						stage.setTitle("Weather Application");
+						stage.setTitle("Light Skies");
 						stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 						stage.setScene(scene2);
 						stage.show();
@@ -105,7 +105,7 @@ public class ControllerOpening implements Initializable {
 						Scene scene2=new Scene(errorinput);
 						Stage stage=new Stage();
 						stage.setResizable(false);
-						stage.setTitle("Weather Application");
+						stage.setTitle("Light Skies");
 						stage.getIcons().add(new Image("/application/istockphoto-815989290-612x612.jpg"));
 						stage.setScene(scene2);
 						stage.show();
@@ -117,7 +117,7 @@ public class ControllerOpening implements Initializable {
 
 			}
 		});
-		
+
 	}
 
 }
