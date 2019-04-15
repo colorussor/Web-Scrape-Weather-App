@@ -1,6 +1,6 @@
 package application;
 
-public class Icons extends ImageCollector{
+public class Icons extends ImageCollector {
 
 	public Icons(int index) {
 		super(index);
@@ -8,7 +8,7 @@ public class Icons extends ImageCollector{
 
 	@Override
 	public boolean Range() {
-		if(getIndex() >= 6 && getIndex() <= 16) {
+		if (getIndex() >= 6 && getIndex() <= 16) {
 			return true;
 		} else {
 			return false;

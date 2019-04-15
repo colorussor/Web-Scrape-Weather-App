@@ -29,7 +29,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import java.time.LocalTime;
 
-
 public class Main extends Application implements Initializable {
 
 	@Override
@@ -38,7 +37,7 @@ public class Main extends Application implements Initializable {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Opening.fxml"));
 			fxmlLoader.load();
 
-			Scene scene=new Scene(fxmlLoader.getRoot());
+			Scene scene = new Scene(fxmlLoader.getRoot());
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("Light Skies");
 			primaryStage.initStyle(StageStyle.DECORATED);
@@ -46,8 +45,7 @@ public class Main extends Application implements Initializable {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
-
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

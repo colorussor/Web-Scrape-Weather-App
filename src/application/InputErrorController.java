@@ -19,23 +19,24 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 public class InputErrorController implements Initializable {
 
-	@FXML 
+	@FXML
 	Button okButton;
-	
-	private void closeButtonAction(){
+
+	private void closeButtonAction() {
 		Stage stage = (Stage) okButton.getScene().getWindow();
 		stage.close();
 	}
-	
+
 	public void initialize(URL location, ResourceBundle resources) {
-	
-		okButton.setOnAction(e->{
+
+		okButton.setOnAction(e -> {
 			try {
-			closeButtonAction();
-			}catch (Exception ex) {
-				
+				closeButtonAction();
+			} catch (Exception ex) {
+
 			}
 		});
 	}
