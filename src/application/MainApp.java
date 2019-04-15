@@ -111,7 +111,12 @@ public class MainApp extends Application implements Initializable {
 		Image snowbg=new Image(getClass().getResourceAsStream(icon.getImage(4)));
 		Image snow=new Image(getClass().getResourceAsStream(icon.getImage(13)));
 		Image rain=new Image(getClass().getResourceAsStream(icon.getImage(11)));
-
+		Image rainbg=new Image(getClass().getResourceAsStream(icon.getImage(4)));
+		Image thunder=new Image(getClass().getResourceAsStream(icon.getImage(15)));
+		Image thunderbg=new Image(getClass().getResourceAsStream(icon.getImage(4)));
+		Image wind=new Image(getClass().getResourceAsStream(icon.getImage(16)));
+		Image storm=new Image(getClass().getResourceAsStream(icon.getImage(18)));
+		
 		String currentlocal=TEST.currentlocation();
 		String currentT=TEST.currenttemp();
 		String currentcond=TEST.currentcondos();
@@ -146,75 +151,166 @@ public class MainApp extends Application implements Initializable {
 		currenttemp.setText(currentT);
 		currentcondit.setText(currentcond);
 		currentcondit.setTextAlignment(TextAlignment.CENTER);
+	
 
 		// RAIN
-		if(dayonec.contains("Rain")) {
+		if(dayonec.contains("Rain") || dayonec.contains("Showers")) {
 			dayoneimage.setImage(rain);
 		}
-		if(daytwoc.contains("Rain")) {
+		if(daytwoc.contains("Rain") || daytwoc.contains("Showers")) {
 			daytwoimage.setImage(rain);
 		}
-		if(daythreec.contains("Rain")) {
+		if(daythreec.contains("Rain") || daythreec.contains("Showers")) {
 			daythreeimage.setImage(rain);
 		}
-		if(dayfourc.contains("Rain")) {
+		if(dayfourc.contains("Rain") || dayfourc.contains("Showers")) {
 			dayfourimage.setImage(rain);
 		}
-		if(dayfivec.contains("Rain")) {
+		if(dayfivec.contains("Rain") || dayfivec.contains("Showers")) {
 			dayfiveimage.setImage(rain);
 		}
 
 		// SUNNY
-		if(dayonec.contains("Sunny")) {
+		if(dayonec.contains("Sunny") || dayonec.equals("Clear")) {
 			dayoneimage.setImage(sunny);
 		}
-		if(daytwoc.contains("Sunny")) {
+		if(daytwoc.contains("Sunny") || daytwoc.equals("Clear")) {
 			daytwoimage.setImage(sunny);
 		}
-		if(daythreec.contains("Sunny")) {
+		if(daythreec.contains("Sunny") || daythreec.equals("Clear")) {
 			daythreeimage.setImage(sunny);
 		}
-		if(dayfourc.contains("Sunny")) {
+		if(dayfourc.contains("Sunny") || dayfourc.equals("Clear")) {
 			dayfourimage.setImage(sunny);
 		}
-		if(dayfivec.contains("Sunny")) {
+		if(dayfivec.contains("Sunny") || dayfivec.equals("Clear")) {
 			dayfiveimage.setImage(sunny);
 		}
 
 		// Cloudy
-		if(dayonec.equals("Mostly Cloudy") || dayonec.equals("Mostly Cloudy")) {
+		if(dayonec.contains("Partly Cloudy") || dayonec.contains("Mostly Cloudy") || dayonec.equals("Fair") || dayonec.equals("Mostly Clear")) {
 			dayoneimage.setImage(partcloudy);
 		}
-		if(daytwoc.equals("Partly Cloudy") || daytwoc.equals("Mostly Cloudy")) {
+		if(daytwoc.contains("Partly Cloudy") || daytwoc.contains("Mostly Cloudy") || daytwoc.equals("Fair") || daytwoc.equals("Mostly Clear")) {
 			daytwoimage.setImage(partcloudy);
 		}
-		if(daythreec.equals("Party Cloudy") || daythreec.equals("Mostly Cloudy")) {
+		if(daythreec.contains("Partly Cloudy") || daythreec.contains("Mostly Cloudy") || daythreec.equals("Fair") || daythreec.equals("Mostly Clear")) {
 			daythreeimage.setImage(partcloudy);
 		}
-		if(dayfourc.equals("Partly Cloudy") || dayfourc.equals("Mostly Cloudy")) {
+		if(dayfourc.contains("Partly Cloudy") || dayfourc.contains("Mostly Cloudy") || dayfourc.equals("Fair") || dayfourc.equals("Mostly Clear")) {
 			dayfourimage.setImage(partcloudy);
 		}
-		if(dayfivec.equals("Partly Cloudy") || dayfivec.equals("Mostly Cloudy")) {
+		if(dayfivec.contains("Partly Cloudy") || dayfivec.contains("Mostly Cloudy") || dayfivec.equals("Fair") || dayfivec.equals("Mostly Clear")) {
 			dayfiveimage.setImage(partcloudy);
 		}
 
-		if(currentcond.equals("Cloudy")){
+		if(dayonec.equals("Cloudy") || dayonec.contains("Clouds")) {
+			dayoneimage.setImage(cloudy);
+		}
+		if(daytwoc.equals("Cloudy") || daytwoc.contains("Clouds")) {
+			daytwoimage.setImage(cloudy);
+		}
+		if(daythreec.equals("Cloudy") || daythreec.contains("Clouds")) {
+			daythreeimage.setImage(cloudy);
+		}
+		if(dayfourc.equals("Cloudy") || dayfourc.contains("Clouds")) {
+			dayfourimage.setImage(cloudy);
+		}
+		if(dayfivec.equals("Cloudy") || dayfivec.contains("Clouds")) {
+			dayfiveimage.setImage(cloudy);
+		}
+		
+		if(dayonec.contains("Thunder")) {
+			dayoneimage.setImage(thunder);
+		}
+		if(daytwoc.contains("Thunder")) {
+			daytwoimage.setImage(thunder);
+		}
+		if(daythreec.contains("Thunder")) {
+			daythreeimage.setImage(thunder);
+		}
+		if(dayfourc.contains("Thunder")) {
+			dayfourimage.setImage(thunder);
+		}
+		if(dayfivec.contains("Thunder")) {
+			dayfiveimage.setImage(thunder);
+		}
+		
+		if(dayonec.contains("Snow")) {
+			dayoneimage.setImage(snow);
+		}
+		if(daytwoc.contains("Snow")) {
+			daytwoimage.setImage(snow);
+		}
+		if(daythreec.contains("Snow")) {
+			daythreeimage.setImage(snow);
+		}
+		if(dayfourc.contains("Snow")) {
+			dayfourimage.setImage(snow);
+		}
+		if(dayfivec.contains("Snow")) {
+			dayfiveimage.setImage(snow);
+		}
+		
+		if(dayonec.contains("Wind")) {
+			dayoneimage.setImage(wind);
+		}
+		if(daytwoc.contains("Wind")) {
+			daytwoimage.setImage(wind);
+		}
+		if(daythreec.contains("Wind")) {
+			daythreeimage.setImage(wind);
+		}
+		if(dayfourc.contains("Wind")) {
+			dayfourimage.setImage(wind);
+		}
+		if(dayfivec.contains("Wind")) {
+			dayfiveimage.setImage(wind);
+		}
+		
+		if(dayonec.equals("Strong Storms")) {
+			dayoneimage.setImage(storm);
+		}
+		if(daytwoc.equals("Strong Storms")) {
+			daytwoimage.setImage(storm);
+		}
+		if(daythreec.equals("Strong Storms")) {
+			daythreeimage.setImage(storm);
+		}
+		if(dayfourc.equals("Strong Storms")) {
+			dayfourimage.setImage(storm);
+		}
+		if(dayfivec.equals("Strong Storms")) {
+			dayfiveimage.setImage(storm);
+		}
+		
+		if(currentcond.contains("Snow")) {
+			currentcondoimage.setImage(snow);
+			currentbg.setImage(snowbg);
+		}else if(currentcond.equals("Cloudy") || currentcond.contains("Clouds")){
 			currentcondoimage.setImage(cloudy);
 			currentbg.setImage(cloudybg);
-		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy")) {
+		}else if(currentcond.equals("Partly Cloudy") || currentcond.equals("Mostly Cloudy") || currentcond.equals("Fair")) {
 			currentcondoimage.setImage(partcloudy);
 			currentbg.setImage(cloudybg);
-		}else if(currentcond.equals("Sunny")) {
+		}else if(currentcond.equals("Sunny") || currentcond.equals("Clear")) {
 			currentcondoimage.setImage(sunny);
 			currentbg.setImage(sunnybg);
 		}else if(currentcond.equals("Fog")) {
 			currentcondoimage.setImage(fog);
 			currentbg.setImage(cloudybg);
-		}else if(currentcond.equals("Snow")) {
-			currentcondoimage.setImage(snow);
-			currentbg.setImage(snowbg);
-		}else if(dayonec.equals("Rain")) {
-			dayoneimage.setImage(rain);
+		}else if(currentcond.contains("Rain") || currentcond.contains("Showers")) {
+			currentcondoimage.setImage(rain);
+			currentbg.setImage(rainbg);
+		}else if(currentcond.contains("Thunder")) {
+			currentcondoimage.setImage(thunder);
+			currentbg.setImage(thunderbg);
+		}else if(currentcond.contains("Wind")) {
+			currentcondoimage.setImage(wind);
+			currentbg.setImage(cloudybg);
+		}else if(currentcond.equals("Strong Storms")) {
+			currentcondoimage.setImage(storm);
+			currentbg.setImage(cloudybg);
 		}
 	}
 	public void start(Stage arg0) throws Exception {

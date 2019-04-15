@@ -2,7 +2,7 @@ package application;
 
 abstract public class ImageCollector {
 	 //all of the image file paths
-	 protected String ppath[] = new String[18];
+	 protected String ppath[] = new String[30];
 	 //index number for the array
 	 protected int index = 0;
 	 
@@ -29,6 +29,8 @@ abstract public class ImageCollector {
 		  ppath[14] = "Sunny-Icon.png";
 		  ppath[15] = "Thunder-and-Lightning.png";
 		  ppath[16] = "Wind-Icon.png";
+		  ppath[17]	= "thunderbg.jpg";
+		  ppath[18]	= "inclement-weather-52093.png";
 	  }
 	  public String getImage(int index) {
 		  return ppath[index];

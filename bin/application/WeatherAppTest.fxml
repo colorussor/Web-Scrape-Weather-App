@@ -33,7 +33,7 @@
          </font>
       </Text>
       <Line endX="-94.5" endY="116.0" layoutX="297.0" layoutY="374.0" startX="-94.5" startY="8.0" />
-      <Text fx:id="day2" layoutX="273.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
+      <Text fx:id="day2" layoutX="273.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
@@ -44,17 +44,17 @@
          </font>
       </Text>
       <Line endX="-94.5" endY="116.0" layoutX="480.0" layoutY="374.0" startX="-94.5" startY="8.0" />
-      <Text fx:id="day4" layoutX="685.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
+      <Text fx:id="day4" layoutX="685.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day3" layoutX="467.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
+      <Text fx:id="day3" layoutX="467.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
       </Text>
-      <Text fx:id="day5" layoutX="899.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
+      <Text fx:id="day5" layoutX="898.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEE">
          <font>
             <Font size="33.0" />
          </font>
@@ -81,22 +81,22 @@
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="daytwoimage" fitHeight="50.0" fitWidth="50.0" layoutX="273.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="daytwoimage" fitHeight="50.0" fitWidth="50.0" layoutX="273.0" layoutY="414.0" pickOnBounds="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="daythreeimage" fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="daythreeimage" fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="414.0" pickOnBounds="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="dayfourimage" fitHeight="50.0" fitWidth="50.0" layoutX="685.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dayfourimage" fitHeight="50.0" fitWidth="50.0" layoutX="685.0" layoutY="414.0" pickOnBounds="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="dayfiveimage" fitHeight="50.0" fitWidth="50.0" layoutX="899.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dayfiveimage" fitHeight="50.0" fitWidth="50.0" layoutX="899.0" layoutY="414.0" pickOnBounds="true">
          <image>
             <Image url="@img-placeholder.1.jpg" />
          </image>
