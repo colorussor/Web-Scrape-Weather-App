@@ -16,7 +16,7 @@
             <Image url="@pnqHVb.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="currentcondit" layoutX="409.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
+      <Text fx:id="currentcondit" layoutX="452.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
          <font>
             <Font name="Calibri Light" size="32.0" />
          </font>
