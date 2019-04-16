@@ -25,7 +25,7 @@
             </Lighting>
          </effect>
       </Text>
-      <Button fx:id="okButton" layoutX="99.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Ok" textOverrun="LEADING_ELLIPSIS">
+      <Button fx:id="okButton" layoutX="98.0" layoutY="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Ok" textOverrun="LEADING_ELLIPSIS">
          <effect>
             <Lighting>
                <bumpInput>

@@ -1,5 +1,7 @@
 package application;
 
+import java.awt.Desktop;
+import java.net.URI;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -9,18 +11,22 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class ControllerOpening implements Initializable {
 
 	// **************This is the String that is used for the zipcode
 	// **************like "02115" from the box.
-	public static String boxZip = "Didnt Work";
+	public static String boxZip = "";
+	@FXML
+	Hyperlink link=new Hyperlink("www.weather.com");
 	// the "Go" button for the opening fxml file..
 	@FXML
 	Button goButton;
@@ -30,8 +36,7 @@ public class ControllerOpening implements Initializable {
 	@FXML
 	AnchorPane AnchorOpen;
 	@FXML
-	Label labeltest;
-
+	Text hyperlink=new Text();
 	@FXML
 	// this is a method that will close ANY pane when called
 	private void closeButtonAction() {
@@ -57,6 +62,14 @@ public class ControllerOpening implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// Pretty easy to understand, when you click the gobutton it opens the main
 		// application.
+		
+		link.setOnMouseClicked(e ->{
+			try {
+			Desktop.getDesktop().browse(new URI("http://www.weather.com"));
+			}catch (Exception ex) {
+				
+			}
+		});
 		goButton.setOnAction(e -> {
 			try {
 				// **************************************

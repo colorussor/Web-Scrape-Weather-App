@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.Glow?>
@@ -19,7 +20,7 @@
    <children>
       <ImageView fitHeight="587.0" fitWidth="1081.0" layoutX="-41.0" layoutY="-28.0" pickOnBounds="true">
          <image>
-            <Image url="@BostonSkyline1.jpg" />
+            <Image url="@light_sky_stars_background_85555_1920x1080.jpg" />
          </image>
       </ImageView>
       <Button fx:id="goButton" layoutX="474.0" layoutY="225.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="GO">
@@ -83,5 +84,16 @@
             </ColorAdjust>
          </effect>
       </TextField>
+      <Text fill="WHITE" layoutX="366.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather API provided by: ">
+         <font>
+            <Font name="Calibri Light" size="15.0" />
+         </font>
+      </Text>
+      <Hyperlink fx:id="link" layoutX="524.0" layoutY="467.0" text="The Weather Channel">
+         <font>
+            <Font name="Calibri Light" size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="257.0" layoutY="239.0" text="e" />
    </children>
 </AnchorPane>

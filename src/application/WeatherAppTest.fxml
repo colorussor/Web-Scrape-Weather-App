@@ -16,7 +16,7 @@
             <Image url="@pnqHVb.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="currentcondit" layoutX="448.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
+      <Text fx:id="currentcondit" layoutX="409.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
          <font>
             <Font name="Calibri Light" size="32.0" />
          </font>
@@ -115,7 +115,7 @@
             </Text>
          </children>
       </StackPane>
-      <Text fx:id="location" layoutX="269.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current day" textAlignment="CENTER">
+      <Text fx:id="location" layoutX="282.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current day" textAlignment="CENTER">
          <font>
             <Font name="Calibri Light" size="59.0" />
          </font>
