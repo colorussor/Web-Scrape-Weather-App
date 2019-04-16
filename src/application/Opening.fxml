@@ -94,6 +94,5 @@
             <Font name="Calibri Light" size="15.0" />
          </font>
       </Hyperlink>
-      <Hyperlink layoutX="257.0" layoutY="239.0" text="e" />
    </children>
 </AnchorPane>
