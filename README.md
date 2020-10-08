@@ -5,4 +5,6 @@ Java Web Scraping Weather Application
 
 This is a Java weather application using web scraping. The library used for the web scraping is Jsoup.
 
+Master branch has all source code. Class "Main" will run the application.
+
 Authors: Richard Colorusso, Kelan Lindhal, Copeland Peacock
