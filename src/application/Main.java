@@ -28,7 +28,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import java.time.LocalTime;
-
+/**
+ * 
+ * @author Richard Colorusso, Kelan Lindhal, Copeland Peacock
+ *
+ */
 public class Main extends Application implements Initializable {
 
 	@Override
