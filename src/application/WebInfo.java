@@ -109,7 +109,8 @@ public class WebInfo {
 			document = Jsoup.connect(test.toString()).get();
 			five_day = Jsoup.connect(test2.toString()).get();
 			// Elements temp = document.select("today_nowcard-temp:contains(\u00b0)");
-			temp = document.select("div.today_nowcard-temp");
+			//temp = document.select("div.today_nowcard-temp");
+			temp = document.select("span.TemperatureValue");
 			phrase = document.select("div.today_nowcard-phrase");
 			feel = document.select("div.today_nowcard-feels");
 			hilo = document.select("div.today_nowcard-hilo");
