@@ -20,7 +20,7 @@ public class TEST {
 		Scanner scan = new Scanner(System.in);
 		System.out.printf("Input a zip code: ");
 		String zip = ControllerOpening.boxZip;
-
+ 
 		WebInfo w = new WebInfo(zip);
 
 		w.testWeb();

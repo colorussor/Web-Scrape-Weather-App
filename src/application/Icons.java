@@ -12,7 +12,7 @@ public class Icons extends ImageCollector {
 			return true;
 		} else {
 			return false;
-		}
+		} 
 	}
 
 }

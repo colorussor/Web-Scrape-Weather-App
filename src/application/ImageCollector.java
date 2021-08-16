@@ -9,7 +9,7 @@ abstract public class ImageCollector {
 	public ImageCollector(int index) {
 		this.index = index;
 		popArray();
-	}
+	} 
 
 	private void popArray() {
 		ppath[0] = "BostonSkyline.jpg";

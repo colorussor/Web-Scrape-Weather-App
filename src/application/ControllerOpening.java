@@ -30,7 +30,7 @@ public class ControllerOpening implements Initializable {
 	// the "Go" button for the opening fxml file..
 	@FXML
 	Button goButton;
-	// Zipcode text field
+	// Zipcode text field 
 	@FXML
 	TextField zip;
 	@FXML

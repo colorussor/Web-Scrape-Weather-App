@@ -13,6 +13,6 @@ public class BackGrounds extends ImageCollector {
 		} else {
 			return false;
 		}
-	}
+	} 
 
 }

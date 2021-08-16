@@ -31,7 +31,7 @@ import java.time.LocalTime;
 /**
  * 
  * @author Richard Colorusso, Kelan Lindhal, Copeland Peacock
- *
+ * 
  */
 public class Main extends Application implements Initializable {
 

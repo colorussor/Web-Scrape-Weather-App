@@ -14,7 +14,7 @@ public class strMip {
 		OGString = test.replaceAll(strMip, replace);
 		if (strMip.contains("|")) {
 			deleteRC();
-		}
+		} 
 	}
 
 	private void deleteRC() {

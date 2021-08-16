@@ -9,7 +9,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class WebInfo {
+public class WebInfo { 
 	private Document document;
 	private Document five_day;
 	private String zip = "";

@@ -28,7 +28,7 @@ public class InputErrorController implements Initializable {
 	private void closeButtonAction() {
 		Stage stage = (Stage) okButton.getScene().getWindow();
 		stage.close();
-	}
+	} 
 
 	public void initialize(URL location, ResourceBundle resources) {
 

@@ -186,7 +186,7 @@ public class MainApp extends Application implements Initializable {
 			dayfiveimage.setImage(sunny);
 		}
 
-		// Cloudy
+		// Cloudy 
 		if (dayonec.contains("Partly Cloudy") || dayonec.contains("Mostly Cloudy") || dayonec.equals("Fair")
 				|| dayonec.equals("Mostly Clear")) {
 			dayoneimage.setImage(partcloudy);
